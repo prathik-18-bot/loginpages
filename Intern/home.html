@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<style>
+    .btn-orange {
+        background-color: orange;
+        border-color: orange;
+        color: white;
+    }
+    .btn-orange:hover {
+        background-color: darkorange;
+        border-color: darkorange;
+    }
+    .input-group-text i {
+        color: black;
+    }
+</style>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="container">
+        <div class="row shadow-lg bg-white rounded overflow-hidden">
+            <!-- Left Section -->
+            <div class="col-md-6 p-5 d-flex flex-column justify-content-center text-center">
+                <img src="Image1.jpg" alt="Analysis" class="img-fluid mb-3">
+                <h2 class="fw-bold">Your UKVI Compliance Partner</h2>
+                <p class="text-muted">Easily manage right-to-work checks and sponsorship compliance. Our HRMS helps you navigate UKVI regulations, ensuring your business stays compliant and secure.</p>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="col-md-6 p-5 bg-light d-flex flex-column justify-content-center">
+                <div class="text-center">
+                    <img src="Image2.jpg" alt="SWC Logo" class="mb-3" style="width: 100px;">
+                    <h2 class="fw-semibold">Login</h2>
+                    <p class="text-muted">Access to our dashboard</p>
+                </div>
+                <form class="mt-4">
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                
+                    <div class="mb-3 position-relative">
+                        <label class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" id="password" class="form-control" placeholder="Enter your password">
+                            <span class="input-group-text" onclick="togglePassword()">
+                                <i id="eyeIcon" class="fas fa-eye"></i>
+                            </span>
+                        </div>
+                    </div
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <a href="#" class="text-decoration-none text-primary">Forgot password?</a>
+                    </div>
+                    <div class="Button">
+                    <button class="btn btn-warning btn-orange w-100 ">Login</button>
+                    </div>
+                </form>
+                <p class="text-center text-muted mt-3">Don't have an account yet? <a href="#" class="text-primary ">Register</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var eyeIcon = document.getElementById("eyeIcon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>
